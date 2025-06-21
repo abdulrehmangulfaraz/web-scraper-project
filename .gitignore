@@ -5,3 +5,6 @@ output/
 .env/
 *.ipynb_checkpoints/
 .DS_Store
+.env
+*.log
+*.db
