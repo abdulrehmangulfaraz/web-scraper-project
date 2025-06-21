@@ -138,25 +138,14 @@ pip install -r requirements.txt
 * ✅ Structured scraping with `Scrapy`
 * ✅ JSON and Excel data handling with `pandas`
 * ✅ CLI & Jupyter-based workflows
-* ✅ GitHub project hosting and version control
 
----
-
-## 🚀 Future Ideas
-
-| Feature              | Description                                   |
-| -------------------- | --------------------------------------------- |
-| 🔄 Pagination        | Crawl through all book pages using Scrapy     |
-| 🗂️ Categories       | Scrape by category and save separately        |
-| 🧠 AI+Scraping       | Train models on scraped data                  |
-| 🖥️ Dynamic Scraping | Use Selenium or Playwright for JS-heavy sites |
-
----
 
 ## 🤝 Author
 
 **Abdulrehman Gulfaraz**
-🔗 GitHub: [@abdulrehmangulfaraz](https://github.com/abdulrehmangulfaraz)
+<br>
+🔗 Email: [abdulrehmangulfaraz1@gmail.com](abdulrehmangulfaraz1@gmail.com)
+<br>
 🔗 LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/abdulrehman-gulfaraz)
 
 ---
