@@ -1,89 +1,166 @@
-# 📘 Book Scraper with BeautifulSoup
+# 📚 Web Scraper Project - Books to Scrape
 
-This project is a real-world web scraping tool built using Python, `requests`, `BeautifulSoup`, and `pandas`.
+A complete web scraping project using **Python**, featuring both **manual scraping** with `requests` + `BeautifulSoup`, and a **framework-based scraper** using `Scrapy`.
 
-It scrapes books from [Books to Scrape](https://books.toscrape.com/), a perfect static site for learning web scraping.
+> 🔍 Target Website: [books.toscrape.com](https://books.toscrape.com)  
+> 🎯 Purpose: Learn structured web scraping, file outputs (JSON, Excel), and scraping with/without a framework.
 
 ---
 
-## 🚀 Features
+## 📦 Features
 
+- Scrapes book data from the homepage of [Books to Scrape](https://books.toscrape.com)
 - Extracts:
   - ✅ Book Title
-  - 💰 Price
+  - 💵 Price
   - ⭐ Rating
-  - 🔗 Link
-- Stores output in:
+  - 🔗 Product Link
+- Saves data to:
   - `data.json`
   - `data.xlsx`
-- Clean, structured code inside Jupyter Notebook
 
 ---
 
-## 📂 Project Structure
+## 🧰 Tools & Technologies
+
+| Tool          | Purpose                          |
+|---------------|----------------------------------|
+| Python        | Base programming language        |
+| `requests`    | To fetch HTML pages (static)     |
+| `BeautifulSoup4` | To parse HTML elements        |
+| `pandas`      | To convert data & save to Excel  |
+| `Scrapy`      | Framework for high-speed scraping |
+| Jupyter Notebook | Interactive testing & debugging |
+| Git & GitHub  | Version control and collaboration |
+
+---
+
+## 🧪 Project Structure
 
 ```
 
 web-scraper-project/
-├── data.json            ← Scraped book data in JSON format
-├── data.xlsx            ← Same data in Excel format
-├── scraper.ipynb        ← Jupyter notebook with all scraping logic
-├── requirements.txt     ← Dependencies
-├── .gitignore
+├── book\_scraper/                ← Scrapy project folder
+│   ├── book\_scraper/
+│   │   └── spiders/
+│   │       └── book\_spider.py
+│   └── scrapy.cfg
+├── scraper.ipynb               ← BeautifulSoup scraper (Jupyter)
+├── scraper.py                  ← BeautifulSoup scraper (script version)
+├── convert\_scrapy\_output.py    ← Converts JSON to Excel
+├── requirements.txt
+├── data.json                   ← Output from BeautifulSoup
+├── data.xlsx                   ← Output from BeautifulSoup
+├── data\_scrapy.json            ← Output from Scrapy
+├── data\_scrapy.xlsx            ← Excel version from Scrapy
+└── README.md
 
 ````
 
 ---
 
-## 📦 Requirements
+## 🧾 Part 1: BeautifulSoup Scraper
 
-- Python 3.x
-- Libraries:
-  - `requests`
-  - `beautifulsoup4`
-  - `pandas`
+### 📍 Location
+- `scraper.ipynb` (Notebook version)
+- `scraper.py` (Script version)
 
-Install them with:
+### ▶️ How to Run
+
+```bash
+# If using script version
+python scraper.py
+````
+
+### 💾 Output Files
+
+* `data.json`
+* `data.xlsx`
+
+---
+
+## 🕷️ Part 2: Scrapy Version (Framework-Based)
+
+### 📍 Location
+
+* `book_scraper/book_scraper/spiders/book_spider.py`
+
+### ▶️ How to Run
+
+From inside the Scrapy project:
+
+```bash
+cd book_scraper
+scrapy crawl bookspider -o ../data_scrapy.json
+```
+
+### 💾 Convert to Excel
+
+```bash
+python convert_scrapy_output.py
+```
+
+### 📂 Output Files
+
+* `data_scrapy.json`
+* `data_scrapy.xlsx`
+
+---
+
+## 💻 How to Set Up
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/abdulrehmangulfaraz/web-scraper-project.git
+cd web-scraper-project
+```
+
+2. **Create a virtual environment:**
+
+```bash
+python -m venv venv
+.\venv\Scripts\Activate
+```
+
+3. **Install dependencies:**
 
 ```bash
 pip install -r requirements.txt
-````
+```
 
 ---
 
-## 🧪 How to Run
+## ✅ Skills Demonstrated
 
-1. Clone the repo:
-
-   ```bash
-   git clone https://github.com/abdulrehmangulfaraz/web-scraper-project.git
-   cd web-scraper-project
-   ```
-
-2. Activate your virtual environment *(if used)*
-
-3. Run the notebook:
-
-   ```bash
-   jupyter notebook
-   ```
+* ✅ HTML parsing & CSS selectors
+* ✅ Static scraping with `requests + BeautifulSoup`
+* ✅ Structured scraping with `Scrapy`
+* ✅ JSON and Excel data handling with `pandas`
+* ✅ CLI & Jupyter-based workflows
+* ✅ GitHub project hosting and version control
 
 ---
 
-## 🌐 Source
+## 🚀 Future Ideas
 
-Scraping target: [https://books.toscrape.com](https://books.toscrape.com)
-(Open-source site designed for scraping practice)
+| Feature              | Description                                   |
+| -------------------- | --------------------------------------------- |
+| 🔄 Pagination        | Crawl through all book pages using Scrapy     |
+| 🗂️ Categories       | Scrape by category and save separately        |
+| 🧠 AI+Scraping       | Train models on scraped data                  |
+| 🖥️ Dynamic Scraping | Use Selenium or Playwright for JS-heavy sites |
 
 ---
 
-## 👑 Author
+## 🤝 Author
 
 **Abdulrehman Gulfaraz**
-[GitHub](https://github.com/abdulrehmangulfaraz) • [LinkedIn](https://www.linkedin.com/in/abdulrehman-gulfaraz)
+🔗 GitHub: [@abdulrehmangulfaraz](https://github.com/abdulrehmangulfaraz)
+🔗 LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/abdulrehman-gulfaraz)
 
 ---
 
-## ⚠️ Disclaimer
+## 📜 License
 
-This project is for educational purposes only. Please respect `robots.txt` and terms of any website you scrape.
+This project is for educational purposes only. Respect robots.txt of any site you scrape in real-world scenarios.
