@@ -87,5 +87,3 @@ Scraping target: [https://books.toscrape.com](https://books.toscrape.com)
 ## ⚠️ Disclaimer
 
 This project is for educational purposes only. Please respect `robots.txt` and terms of any website you scrape.
-
-````
